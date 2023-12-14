@@ -1,3 +1,3 @@
 # kumackey.com
 
-https://www.kumackey.com/
+https://kumackey.com/
