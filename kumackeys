@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kumackey.com / 全国のくまっきー</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        img {
+            width: 50px;
+            height: auto;
+        }
+        header img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>kumackey.com / 全国のくまっきー</h1>
+        <img src="kumackey.png" alt="kumackey">
+    </header>
+    <main>
+        <section>
+            <img src="kumackey.png" alt="kumackey">
+            <img src="kumakkey.png" alt="kumakkey">
+            <img src="kumackey.png" alt="kumakey">
+        </section>
+    </main>
+</body>
+</html>
