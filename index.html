@@ -9,13 +9,20 @@
             text-align: center;
         }
 
-        img {
+        .sns {
             width: 50px;
             height: auto;
         }
 
         header img {
             width: 100px;
+        }
+
+        .article {
+            display: block;
+            max-width: 80%;
+            margin: auto;
+            text-align: left;
         }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8723710316942149"
@@ -28,21 +35,65 @@
 </header>
 <main>
     <section>
-        <a href="https://github.com/kumackey"><img src="github-mark.png" alt="Github"></a>
-        <a href="https://twitter.com/kumackey_"><img src="x.png" alt="X"></a>
-        <a href="https://zenn.dev/kumackey"><img src="zenn.jpeg" alt="Zenn"></a>
-        <a href="https://qiita.com/kumackey"><img src="qiita.png" alt="Qiita"></a>
+        <a href="https://github.com/kumackey"><img class="sns" src="github-mark.png" alt="Github"></a>
+        <a href="https://twitter.com/kumackey_"><img class="sns" src="x.png" alt="X"></a>
+        <a href="https://zenn.dev/kumackey"><img class="sns" src="zenn.jpeg" alt="Zenn"></a>
+        <a href="https://qiita.com/kumackey"><img class="sns" src="qiita.png" alt="Qiita"></a>
     </section>
     <br>
     <section>
         <h2>Works</h2>
-        <article>
+        <article class="article">
             <h3><a href="https://patchwork.kumackey.com">Patchwork Calculator</a></h3>
-            <p>ボードゲームのパッチワークにおける、パッチの得点効率を計算する、TypeScript/React製のWEBツールです。</p>
+            <p>ボードゲームのパッチワークにおける、パッチの得点効率を計算するWEBツールです。<br>
+                TypeScript/Reactで作成しています。</p>
             <h3><a href="https://github.com/kumackey/profile-updater">Profile Updater</a></h3>
-            <p>ZennやQiitaの記事、connpassのイベントのリストを取得し、Githubのプロフィールを更新する、Go製のGithub Actionsです。</p>
+            <p>ZennやQiitaの記事などを取得し、GitHubのプロフィールを更新する、Go製のGithub Actionsです。</p>
         </article>
     </section>
+    <br>
+    <section>
+        <h2>Career</h2>
+        <article class="article">
+            <h3><img src="recruit.jpeg" alt="Recruit" style="width: 50px;">株式会社リクルート (2023-06-15〜現在)</h3>
+            <p><a href="https://studysapuri.jp/">スタディサプリ</a>のプロダクト基盤開発チームでのバックエンド開発者。</p>
+            <h4>プロジェクト</h4>
+            <ul>
+                <li>動画配信基盤の開発</li>
+                <li>Feature Toggleサービスの開発</li>
+                <li>モノリスからマイクロサービスへの移行</li>
+            </ul>
+            <h4>技術</h4>
+            <ul>
+                <li>言語: Go, Rust, Ruby on Rails</li>
+                <li>CDN: Varnish Configuration Language, Edge Computing</li>
+                <li>ストレージ: MongoDB, PostgreSQL, S3, Aurora Serverless</li>
+                <li>その他: Kubernetes, Lambda, GitHub Actions, Terraform</li>
+            </ul>
+
+            <h3><img src="sumally.svg" alt="Summary" style="width: 50px;">
+                株式会社サマリー (2020-06-01〜2023-06-14)</h3>
+            <p><a href="https://pocket.sumally.com/">サマリーポケット</a>のバックエンド開発者。</p>
+            <h4>プロジェクト</h4>
+            <ul>
+                <li>レガシーアプリケーションにおけるCIの構築</li>
+                <li>倉庫管理システムのマイクロサービスへの移行</li>
+                <li>配送日時・集荷日時のスケジュール機能の開発</li>
+                <li>モバイル通知システムの刷新</li>
+            </ul>
+            <h4>技術</h4>
+            <ul>
+                <li>言語: PHP, Go, Shell Script</li>
+                <li>データベース: MongoDB, PostgreSQL</li>
+                <li>AWS: EC2, ECS, SNS, SQS</li>
+                <li>CI/CD・ジョブ: GitHub Actions, Jenkins, Airflow</li>
+                <li>その他: FCM, Terraform</li>
+            </ul>
+            <h3>新電元工業株式会社 (2018-04-01〜2020-02-20)</h3>
+            <p>ディスクリート半導体であるMOSFETの設計開発。ソフトウェア開発者としての経歴ではないため、詳細は省略。</p>
+        </article>
+    </section>
+    <br>
     <section>
         <h2>その他</h2>
         <a href="family/index.html">Family</a>
