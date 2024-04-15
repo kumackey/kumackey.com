@@ -4,29 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kumackey.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <style>
         body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
             text-align: center;
         }
 
-        .sns {
-            width: 50px;
-            height: auto;
+        header {
+            background-color: #F3F3F3;
+            padding: 10px 0;
+            margin-bottom: 20px;
         }
 
         header img {
             width: 100px;
         }
 
+        img.sns {
+            width: 50px;
+            height: auto;
+        }
+
+        div.sns {
+            margin-bottom: 10px;
+        }
+
         .article {
-            display: block;
-            max-width: 80%;
-            margin: auto;
+            max-width: 800px;
             text-align: left;
+            background-color: #F3F3F3;
+            border-radius: 10px;
+            padding: 20px 15px;
+            margin: auto auto 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            margin-top: 40px;
+        }
+
+        a {
+            color: #007bff;
+        }
+
+        a:hover {
+            color: #0056b3;
         }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8723710316942149"
-            crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
@@ -35,15 +66,19 @@
 </header>
 <main>
     <section>
-        <a href="https://github.com/kumackey"><img class="sns" src="github-mark.png" alt="Github"></a>
-        <a href="https://twitter.com/kumackey_"><img class="sns" src="x.png" alt="X"></a>
-        <a href="https://zenn.dev/kumackey"><img class="sns" src="zenn.jpeg" alt="Zenn"></a>
-        <a href="https://qiita.com/kumackey"><img class="sns" src="qiita.png" alt="Qiita"></a>
+        <div class="sns">
+            <a href="https://github.com/kumackey"><img class="sns" src="github-mark.png" alt="Github"></a>
+            <a href="https://twitter.com/kumackey_"><img class="sns" src="x.png" alt="X"></a>
+            <a href="https://zenn.dev/kumackey"><img class="sns" src="zenn.jpeg" alt="Zenn"></a>
+            <a href="https://qiita.com/kumackey"><img class="sns" src="qiita.png" alt="Qiita"></a>
+            <a href="family/index.html">👨‍👩‍👧‍👦</a>
+        </div>
     </section>
-    <br>
     <section>
-        <h2>Works</h2>
         <article class="article">
+            <h2>Works</h2>
+            <h3><a href="https://github.com/kumackey/kiriban">Kiriban</a></h3>
+            <p>Issue番号のキリ番を判定し祝福してくれる、Go製のGithub Actionsです。</p>
             <h3><a href="https://patchwork.kumackey.com">Patchwork Calculator</a></h3>
             <p>ボードゲームのパッチワークにおける、パッチの得点効率を計算するWEBツールです。<br>
                 TypeScript/Reactで作成しています。</p>
@@ -51,10 +86,9 @@
             <p>ZennやQiitaの記事などを取得し、GitHubのプロフィールを更新する、Go製のGithub Actionsです。</p>
         </article>
     </section>
-    <br>
     <section>
-        <h2>Career</h2>
         <article class="article">
+            <h2>Career</h2>
             <h3><img src="recruit.jpeg" alt="Recruit" style="width: 50px;">株式会社リクルート (2023-06-15〜現在)</h3>
             <p><a href="https://studysapuri.jp/">スタディサプリ</a>のプロダクト基盤開発チームでのバックエンド開発者。</p>
             <h4>プロジェクト</h4>
@@ -90,13 +124,9 @@
                 <li>その他: FCM, Terraform</li>
             </ul>
             <h3>新電元工業株式会社 (2018-04-01〜2020-02-20)</h3>
-            <p>ディスクリート半導体であるMOSFETの設計開発。ソフトウェア開発者としての経歴ではないため、詳細は省略。</p>
+            <p>ディスクリート半導体であるMOSFETの設計開発。<br>
+                ソフトウェア開発者としての経歴ではないため、詳細は省略。</p>
         </article>
-    </section>
-    <br>
-    <section>
-        <h2>その他</h2>
-        <a href="family/index.html">Family</a>
     </section>
 </main>
 </body>
