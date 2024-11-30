@@ -96,7 +96,7 @@
                         }
                         const data = await response.json();
                         if (data.result) {
-                            resultDiv.textContent = `おめでとうございます！${data.number}はキリ番です！次のキリ番は${data.next}です！`;
+                            resultDiv.textContent = `${data.number}はキリ番です！次のキリ番は${data.next}です！`;
                         } else {
                             resultDiv.textContent = `${data.number}はキリ番ではありません...`;
                         }
