@@ -90,7 +90,7 @@
                     const number = document.getElementById('numberInput').value;
                     const resultDiv = document.getElementById('result');
                     try {
-                        const response = await fetch(`https://kiriban.kumak1t09e0.workers.dev/check/${number}`);
+                        const response = await fetch(`https://api.kiriban.kumackey.com/check/${number}`);
                         if (!response.ok) {
                             throw new Error('Network response was not ok');
                         }
