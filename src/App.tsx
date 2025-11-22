@@ -1,28 +1,7 @@
-import { useState } from 'react'
 import './App.css'
+import { KiribanForm } from './components/KiribanForm'
 
 function App() {
-  const [number, setNumber] = useState('')
-  const [result, setResult] = useState('')
-
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault()
-    try {
-      const response = await fetch(`https://api.kiriban.kumackey.com/check/${number}`)
-      if (!response.ok) {
-        throw new Error('Network response was not ok')
-      }
-      const data = await response.json()
-      if (data.result) {
-        setResult(`${data.number}はキリ番です！次のキリ番は${data.next}です！`)
-      } else {
-        setResult(`${data.number}はキリ番ではありません...`)
-      }
-    } catch {
-      setResult('通信に失敗しました')
-    }
-  }
-
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans">
       <header className="bg-gray-100 py-4 mb-5 text-center">
@@ -62,23 +41,10 @@ function App() {
 
             <h3 className="text-lg font-semibold mt-8"><a href="https://github.com/kumackey/kiriban" className="text-blue-600 hover:text-blue-800">Kiriban</a></h3>
             <p className="mb-2">Issue番号のキリ番を判定し祝福してくれる、Go製のGithub Actionsです。</p>
-            <form onSubmit={handleSubmit} className="flex gap-2 items-center flex-wrap">
-              <input
-                type="number"
-                value={number}
-                onChange={(e) => setNumber(e.target.value)}
-                required
-                max={999999}
-                min={-999999}
-                className="border border-gray-300 rounded px-2 py-1 w-32"
-              />
-              <button type="submit" className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">キリ番チェック</button>
-              <span className="text-sm">{result}</span>
-            </form>
+            <KiribanForm />
 
             <h3 className="text-lg font-semibold mt-8"><a href="https://patchwork.kumackey.com" className="text-blue-600 hover:text-blue-800">Patchwork Calculator</a></h3>
-            <p>ボードゲームのパッチワークにおける、パッチの得点効率を計算するWEBツールです。<br />
-              TypeScript/Reactで作成しています。</p>
+            <p>ボードゲームのパッチワークにおける、パッチの得点効率を計算するWEBツールです。</p>
 
             <h3 className="text-lg font-semibold mt-8"><a href="https://github.com/kumackey/profile-updater" className="text-blue-600 hover:text-blue-800">Profile Updater</a></h3>
             <p>ZennやQiitaの記事などを取得し、GitHubのプロフィールを更新する、Go製のGithub Actionsです。</p>
