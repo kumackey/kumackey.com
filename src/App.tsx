@@ -1,58 +1,5 @@
 import { useState } from 'react'
-
-const styles = `
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    text-align: center;
-}
-
-header {
-    background-color: #F3F3F3;
-    padding: 10px 0;
-    margin-bottom: 20px;
-}
-
-header img {
-    width: 100px;
-}
-
-img.sns {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-div.sns {
-    margin-bottom: 10px;
-}
-
-.article {
-    max-width: 800px;
-    text-align: left;
-    background-color: #F3F3F3;
-    border-radius: 10px;
-    padding: 20px 15px;
-    margin: auto auto 20px;
-}
-
-h2 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-h3 {
-    margin-top: 40px;
-}
-
-a {
-    color: #007bff;
-}
-
-a:hover {
-    color: #0056b3;
-}
-`
+import './App.css'
 
 function App() {
   const [number, setNumber] = useState('')
@@ -78,7 +25,6 @@ function App() {
 
   return (
     <>
-      <style>{styles}</style>
       <header>
         <h1>kumackey.com</h1>
         <img src="/kumackey.png" alt="kumackey" />
