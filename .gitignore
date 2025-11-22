@@ -3,3 +3,7 @@
 
 # Ignore all files in the .vscode directory
 .vscode/
+
+# Wrangler
+.wrangler/
+node_modules/

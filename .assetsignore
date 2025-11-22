@@ -1,0 +1,10 @@
+.git
+.github
+.idea
+.claude
+.wrangler
+node_modules
+wrangler.toml
+.gitignore
+.assetsignore
+README.md
