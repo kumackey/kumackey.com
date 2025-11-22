@@ -7,3 +7,4 @@
 # Wrangler
 .wrangler/
 node_modules/
+dist/
