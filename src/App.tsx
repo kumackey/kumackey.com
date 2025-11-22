@@ -137,25 +137,26 @@ function App() {
           <article className="article">
             <h2>Career</h2>
             <h3><img src="/recruit.jpeg" alt="Recruit" style={{ width: '50px' }} />株式会社リクルート (2023-06-15〜現在)</h3>
-            <p><a href="https://studysapuri.jp/">スタディサプリ</a>にてバックエンド・インフラ開発。</p>
+            <p><a href="https://studysapuri.jp/">スタディサプリ</a>にてバックエンド開発。</p>
             <h4>プロジェクト</h4>
             <ul>
-              <li>動画配信基盤の開発
+              <li>動画配信基盤の設計・開発
                 <ul>
-                  <li><a href="https://blog.studysapuri.jp/entry/2025/03/04/090000">字幕配信機能の設計開発</a></li>
-                  <li>エンコーディングの最適化</li>
-                  <li>コンテンツ保護</li>
+                  <li><a href="https://blog.studysapuri.jp/entry/2025/03/04/090000">字幕配信機能の開発</a></li>
+                  <li>動画入稿基盤の開発</li>
+                  <li>コンテンツのセキュリティ向上</li>
+                  <li>CDN 移管</li>
                 </ul>
               </li>
-              <li>Feature Togglesマイクロサービスの開発</li>
+              <li>Feature Toggles マイクロサービスの開発</li>
               <li>モノリスからマイクロサービスへの移行</li>
-              <li>LLMワークフローの設計開発</li>
+              <li>LLM ワークフローの設計開発</li>
             </ul>
             <h4>技術</h4>
             <ul>
-              <li>言語: Go, Ruby on Rails, Rust, TypeScript</li>
-              <li>CDN: Fastly, Fastly Compute, Cloudflare, Cloudflare Workers, CloudFront, Lambda@Edge</li>
-              <li>動画配信: AWS MediaConvert, Bitmovin Player, HLS</li>
+              <li>言語: Go, TypeScript, Ruby on Rails</li>
+              <li>CDN: Fastly, Cloudflare, CloudFront, Edge Computing</li>
+              <li>動画配信: AWS Elemental MediaConvert, HLS</li>
               <li>ストレージ: PostgreSQL, MongoDB, Aurora Serverless, S3</li>
               <li>その他: Kubernetes, Lambda, GitHub Actions, Terraform</li>
             </ul>
