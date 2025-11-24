@@ -49,7 +49,7 @@ function App() {
             <h3 className="text-lg font-semibold mt-8"><a href="https://github.com/kumackey/profile-updater" className="text-blue-600 hover:text-blue-800">Profile Updater</a></h3>
             <p>ZennやQiitaの記事などを取得し、GitHubのプロフィールを更新する、Go製のGithub Actionsです。</p>
 
-            <h3 className="text-lg font-semibold mt-8"><a href="https://kudanshita-slot.kumackey.com/" className="text-blue-600 hover:text-blue-800">Kudanshita Slot</a></h3>
+            <h3 className="text-lg font-semibold mt-8"><a href="/kudanshita-slot" className="text-blue-600 hover:text-blue-800">Kudanshita Slot</a></h3>
             <p>九段下の完成を目指すスロットゲームです。</p>
           </article>
         </section>
