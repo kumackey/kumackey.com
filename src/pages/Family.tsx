@@ -22,13 +22,13 @@ export function Family() {
 			<main className="px-4">
 				<section className="mb-5">
 					<article className="max-w-3xl mx-auto bg-gray-100 rounded-lg p-5">
-						<div className="flex justify-center gap-4 flex-wrap">
+						<div className="flex justify-center gap-3 flex-wrap">
 							{images.map((img) => (
 								<img
 									key={img.src}
 									src={img.src}
 									alt={img.alt}
-									className="w-32 h-32 object-contain"
+									className="w-30 h-30 object-contain"
 								/>
 							))}
 						</div>

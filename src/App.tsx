@@ -200,11 +200,12 @@ function App() {
 						</ul>
 						<h4 className="font-semibold mt-4">技術</h4>
 						<ul className="list-disc pl-5 space-y-1">
-							<li>言語: Go, TypeScript, Ruby on Rails</li>
+							<li>言語: Go, TypeScript, Ruby on Rails, Rust</li>
 							<li>CDN: Fastly, Cloudflare, CloudFront, Edge Computing</li>
-							<li>動画配信: AWS Elemental MediaConvert, HLS</li>
+							<li>動画配信: AWS Elemental MediaConvert, HLS, WebVTT, H.264</li>
 							<li>ストレージ: PostgreSQL, MongoDB, Aurora Serverless, S3</li>
-							<li>その他: Kubernetes, Lambda, GitHub Actions, Terraform</li>
+							<li>ワークフロー: Argo Workflows, Github Actions</li>
+							<li>その他: Kubernetes, Lambda, Terraform</li>
 						</ul>
 
 						<h3 className="text-lg font-semibold mt-8 flex items-center gap-2">
