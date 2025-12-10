@@ -22,7 +22,7 @@ export function Family() {
 			<main className="px-4">
 				<section className="mb-5">
 					<article className="max-w-3xl mx-auto bg-gray-100 rounded-lg p-5">
-						<div className="flex justify-center gap-3 flex-wrap">
+						<div className="flex justify-center gap-2 flex-wrap">
 							{images.map((img) => (
 								<img
 									key={img.src}
