@@ -28,7 +28,7 @@ export function Family() {
 									key={img.src}
 									src={img.src}
 									alt={img.alt}
-									className="w-30 h-30 object-contain"
+									className="w-28 h-28 object-contain"
 								/>
 							))}
 						</div>
