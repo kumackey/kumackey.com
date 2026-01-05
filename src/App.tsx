@@ -85,6 +85,14 @@ function App() {
 							</li>
 							<li>
 								<a
+									href="https://blog.studysapuri.jp/entry/2026/01/05/090000"
+									className="text-blue-600 hover:text-blue-800"
+								>
+									Argo Workflows で構築する、生成 AI 字幕生成ワークフロー
+								</a>
+							</li>
+							<li>
+								<a
 									href="https://qiita.com/kumackey/items/bf252ca24d343e71d6a2"
 									className="text-blue-600 hover:text-blue-800"
 								>
@@ -189,14 +197,21 @@ function App() {
 											字幕配信機能の開発
 										</a>
 									</li>
+									<li>
+										<a
+											href="https://blog.studysapuri.jp/entry/2026/01/05/090000"
+											className="text-blue-600 hover:text-blue-800"
+										>
+											字幕生成ワークフローの開発
+										</a>
+									</li>
 									<li>動画入稿基盤の開発</li>
 									<li>コンテンツのセキュリティ向上</li>
-									<li>CDN 移管</li>
+									<li>コスト削減のための CDN 移管</li>
 								</ul>
 							</li>
 							<li>Feature Toggles マイクロサービスの開発</li>
 							<li>モノリスからマイクロサービスへの移行</li>
-							<li>LLM ワークフローの設計開発</li>
 						</ul>
 						<h4 className="font-semibold mt-4">技術</h4>
 						<ul className="list-disc pl-5 space-y-1">
