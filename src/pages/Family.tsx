@@ -29,6 +29,9 @@ export function Family() {
 									src={img.src}
 									alt={img.alt}
 									className="w-28 h-28 object-contain"
+									width={112}
+									height={112}
+									loading="lazy"
 								/>
 							))}
 						</div>

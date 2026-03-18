@@ -6,27 +6,33 @@ function App() {
 		<div className="min-h-screen bg-white text-gray-800 font-sans">
 			<header className="bg-gray-100 py-4 mb-5 text-center">
 				<h1 className="text-2xl font-bold mb-2">kumackey.com</h1>
-				<img src="/kumackey.png" alt="kumackey" className="w-24 mx-auto" />
+				<img src="/kumackey.png" alt="kumackey" className="w-24 mx-auto" width={96} height={96} />
 			</header>
 
 			<main className="px-4">
-				<section className="mb-5">
+				<nav className="mb-5">
 					<div className="flex justify-center gap-2 flex-wrap">
 						<a href="https://github.com/kumackey">
 							<img
 								className="w-12 h-12 object-contain"
 								src="/github-mark.png"
 								alt="Github"
+								width={48}
+								height={48}
+								loading="lazy"
 							/>
 						</a>
 						<a href="https://twitter.com/kumackey_">
-							<img className="w-12 h-12 object-contain" src="/x.png" alt="X" />
+							<img className="w-12 h-12 object-contain" src="/x.png" alt="X" width={48} height={48} loading="lazy" />
 						</a>
 						<a href="https://bsky.app/profile/kumackey.bsky.social">
 							<img
 								className="w-12 h-12 object-contain"
 								src="/bluesky.png"
 								alt="Bluesky"
+								width={48}
+								height={48}
+								loading="lazy"
 							/>
 						</a>
 						<a href="https://zenn.dev/kumackey">
@@ -34,6 +40,9 @@ function App() {
 								className="w-12 h-12 object-contain"
 								src="/zenn.jpeg"
 								alt="Zenn"
+								width={48}
+								height={48}
+								loading="lazy"
 							/>
 						</a>
 						<a href="https://qiita.com/kumackey">
@@ -41,6 +50,9 @@ function App() {
 								className="w-12 h-12 object-contain"
 								src="/qiita.png"
 								alt="Qiita"
+								width={48}
+								height={48}
+								loading="lazy"
 							/>
 						</a>
 						<a href="https://note.com/kumackey">
@@ -48,6 +60,9 @@ function App() {
 								className="w-12 h-12 object-contain"
 								src="/note.png"
 								alt="Note"
+								width={48}
+								height={48}
+								loading="lazy"
 							/>
 						</a>
 						<a href="https://www.docswell.com/user/kumackey">
@@ -55,13 +70,16 @@ function App() {
 								className="w-12 h-12 object-contain"
 								src="/docswell.png"
 								alt="Docswell"
+								width={48}
+								height={48}
+								loading="lazy"
 							/>
 						</a>
 						<a href="/family" className="text-2xl">
 							👨‍👩‍👧‍👦
 						</a>
 					</div>
-				</section>
+				</nav>
 
 				<section className="mb-5">
 					<article className="max-w-3xl mx-auto bg-gray-100 rounded-lg p-5 text-left">
@@ -172,8 +190,8 @@ function App() {
 						<h2 className="text-xl font-bold mb-5 text-center">Career</h2>
 
 						<h3 className="text-lg font-semibold mt-8 flex items-center gap-2">
-							<img src="/recruit.jpeg" alt="Recruit" className="w-12" />
-							株式会社リクルート (2023-06-15〜現在)
+							<img src="/recruit.jpeg" alt="Recruit" className="w-12" width={48} height={48} loading="lazy" />
+							株式会社リクルート (<time dateTime="2023-06-15">2023-06-15</time>〜現在)
 						</h3>
 						<p>
 							<a
@@ -224,8 +242,8 @@ function App() {
 						</ul>
 
 						<h3 className="text-lg font-semibold mt-8 flex items-center gap-2">
-							<img src="/sumally.svg" alt="Summary" className="w-12" />
-							株式会社サマリー (2020-06-01〜2023-06-14)
+							<img src="/sumally.svg" alt="Summary" className="w-12" width={48} height={48} loading="lazy" />
+							株式会社サマリー (<time dateTime="2020-06-01">2020-06-01</time>〜<time dateTime="2023-06-14">2023-06-14</time>)
 						</h3>
 						<p>
 							<a
@@ -253,7 +271,7 @@ function App() {
 						</ul>
 
 						<h3 className="text-lg font-semibold mt-8">
-							新電元工業株式会社 (2018-04-01〜2020-02-20)
+							新電元工業株式会社 (<time dateTime="2018-04-01">2018-04-01</time>〜<time dateTime="2020-02-20">2020-02-20</time>)
 						</h3>
 						<p>
 							ディスクリート半導体であるMOSFETの設計開発。
@@ -406,6 +424,10 @@ function App() {
 					</article>
 				</section>
 			</main>
+
+			<footer className="text-center text-gray-500 text-sm py-4">
+				<p>&copy; {new Date().getFullYear()} kumackey</p>
+			</footer>
 		</div>
 	);
 }
