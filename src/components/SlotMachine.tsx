@@ -34,10 +34,13 @@ export function SlotMachine() {
 
 	return (
 		<div>
-			<div className="flex justify-center text-4xl">
+			<div className="flex justify-center text-4xl gap-1">
 				{reels.map((symbol, index) => (
 					// biome-ignore lint/suspicious/noArrayIndexKey: Fixed position slots
-					<div key={index} className="mx-2">
+					<div
+						key={index}
+						className="w-16 h-16 flex items-center justify-center bg-white rounded-xl shadow-sm border border-gray-200"
+					>
 						{symbol}
 					</div>
 				))}
@@ -46,12 +49,12 @@ export function SlotMachine() {
 				type="button"
 				onClick={spin}
 				disabled={spinning}
-				className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:bg-gray-400"
+				className="mt-6 px-6 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 active:bg-blue-800 disabled:bg-gray-400 transition-colors duration-200 cursor-pointer font-medium"
 			>
 				{spinning ? "Spinning..." : "Spin"}
 			</button>
 			{celebration && (
-				<div className="mt-5 text-xl text-green-600">
+				<div className="mt-6 text-xl text-green-600 font-medium">
 					Congratulations! 九段下🎉
 				</div>
 			)}

@@ -3,17 +3,20 @@ import { SlotMachine } from "../components/SlotMachine";
 
 export function KudanshitaSlot() {
 	return (
-		<div className="min-h-screen bg-white text-gray-800 font-sans">
-			<header className="bg-gray-100 py-4 mb-5 text-center">
-				<h1 className="text-2xl font-bold mb-2">Kudanshita Slot🎰</h1>
-				<Link to="/" className="text-blue-600 hover:text-blue-800">
+		<div className="min-h-screen bg-gray-50 text-gray-800 font-sans">
+			<header className="bg-gradient-to-b from-gray-100 to-gray-50 py-8 mb-8 text-center">
+				<h1 className="text-2xl font-bold mb-3 tracking-tight">Kudanshita Slot🎰</h1>
+				<Link
+					to="/"
+					className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
+				>
 					← Back to Home
 				</Link>
 			</header>
 
 			<main className="px-4">
-				<section className="mb-5">
-					<article className="max-w-3xl mx-auto bg-gray-100 rounded-lg p-5 text-center">
+				<section className="mb-8">
+					<article className="max-w-3xl mx-auto bg-white rounded-2xl p-6 text-center shadow-sm">
 						<SlotMachine />
 					</article>
 				</section>

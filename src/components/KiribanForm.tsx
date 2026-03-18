@@ -33,11 +33,11 @@ export function KiribanForm() {
 				required
 				max={999999}
 				min={-999999}
-				className="border border-gray-300 rounded px-2 py-1 w-32"
+				className="border border-gray-300 rounded-lg px-3 py-1.5 w-32 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow duration-200"
 			/>
 			<button
 				type="submit"
-				className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
+				className="bg-blue-600 text-white px-4 py-1.5 rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-colors duration-200 cursor-pointer"
 			>
 				キリ番チェック
 			</button>
