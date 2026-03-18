@@ -1,5 +1,28 @@
 import "./App.css";
+import { ExternalLink } from "./components/ExternalLink";
 import { KiribanForm } from "./components/KiribanForm";
+
+const socialLinks = [
+	{
+		href: "https://github.com/kumackey",
+		src: "/github-mark.png",
+		alt: "Github",
+	},
+	{ href: "https://twitter.com/kumackey_", src: "/x.png", alt: "X" },
+	{
+		href: "https://bsky.app/profile/kumackey.bsky.social",
+		src: "/bluesky.png",
+		alt: "Bluesky",
+	},
+	{ href: "https://zenn.dev/kumackey", src: "/zenn.jpeg", alt: "Zenn" },
+	{ href: "https://qiita.com/kumackey", src: "/qiita.png", alt: "Qiita" },
+	{ href: "https://note.com/kumackey", src: "/note.png", alt: "Note" },
+	{
+		href: "https://www.docswell.com/user/kumackey",
+		src: "/docswell.png",
+		alt: "Docswell",
+	},
+];
 
 function App() {
 	return (
@@ -18,70 +41,27 @@ function App() {
 			<main className="px-4">
 				<nav className="mb-8">
 					<div className="flex justify-center gap-3 flex-wrap">
-						<a href="https://github.com/kumackey">
-							<img
-								className="w-12 h-12 object-contain transition-transform duration-200 hover:scale-110"
-								src="/github-mark.png"
-								alt="Github"
-								width={48}
-								height={48}
-								loading="lazy"
-							/>
-						</a>
-						<a href="https://twitter.com/kumackey_">
-							<img className="w-12 h-12 object-contain transition-transform duration-200 hover:scale-110" src="/x.png" alt="X" width={48} height={48} loading="lazy" />
-						</a>
-						<a href="https://bsky.app/profile/kumackey.bsky.social">
-							<img
-								className="w-12 h-12 object-contain transition-transform duration-200 hover:scale-110"
-								src="/bluesky.png"
-								alt="Bluesky"
-								width={48}
-								height={48}
-								loading="lazy"
-							/>
-						</a>
-						<a href="https://zenn.dev/kumackey">
-							<img
-								className="w-12 h-12 object-contain transition-transform duration-200 hover:scale-110"
-								src="/zenn.jpeg"
-								alt="Zenn"
-								width={48}
-								height={48}
-								loading="lazy"
-							/>
-						</a>
-						<a href="https://qiita.com/kumackey">
-							<img
-								className="w-12 h-12 object-contain transition-transform duration-200 hover:scale-110"
-								src="/qiita.png"
-								alt="Qiita"
-								width={48}
-								height={48}
-								loading="lazy"
-							/>
-						</a>
-						<a href="https://note.com/kumackey">
-							<img
-								className="w-12 h-12 object-contain transition-transform duration-200 hover:scale-110"
-								src="/note.png"
-								alt="Note"
-								width={48}
-								height={48}
-								loading="lazy"
-							/>
-						</a>
-						<a href="https://www.docswell.com/user/kumackey">
-							<img
-								className="w-12 h-12 object-contain transition-transform duration-200 hover:scale-110"
-								src="/docswell.png"
-								alt="Docswell"
-								width={48}
-								height={48}
-								loading="lazy"
-							/>
-						</a>
-						<a href="/family" className="text-2xl transition-transform duration-200 hover:scale-110 inline-block">
+						{socialLinks.map((link) => (
+							<a
+								key={link.alt}
+								href={link.href}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									className="w-12 h-12 object-contain transition-transform duration-200 hover:scale-110"
+									src={link.src}
+									alt={link.alt}
+									width={48}
+									height={48}
+									loading="lazy"
+								/>
+							</a>
+						))}
+						<a
+							href="/family"
+							className="text-2xl transition-transform duration-200 hover:scale-110 inline-block"
+						>
 							👨‍👩‍👧‍👦
 						</a>
 					</div>
@@ -89,48 +69,35 @@ function App() {
 
 				<section className="mb-8">
 					<article className="max-w-3xl mx-auto bg-white rounded-2xl p-6 text-left shadow-sm hover:shadow-md transition-shadow duration-300">
-						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">Pickups</h2>
+						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">
+							Pickups
+						</h2>
 						<ul className="list-disc pl-5 space-y-1">
 							<li>
-								<a
-									href="https://www.docswell.com/s/kumackey/5MXYX2-2025-02-02-114330"
-									className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-								>
+								<ExternalLink href="https://www.docswell.com/s/kumackey/5MXYX2-2025-02-02-114330">
 									静的スタンディングデスク
-								</a>
+								</ExternalLink>
 							</li>
 							<li>
-								<a
-									href="https://blog.studysapuri.jp/entry/2025/03/04/090000"
-									className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-								>
+								<ExternalLink href="https://blog.studysapuri.jp/entry/2025/03/04/090000">
 									再エンコード無しで、HLS動画への字幕の追加を実現する
-								</a>
+								</ExternalLink>
 							</li>
 							<li>
-								<a
-									href="https://blog.studysapuri.jp/entry/2026/01/05/090000"
-									className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-								>
+								<ExternalLink href="https://blog.studysapuri.jp/entry/2026/01/05/090000">
 									Argo Workflows で構築する、生成 AI 字幕生成ワークフロー
-								</a>
+								</ExternalLink>
 							</li>
 							<li>
-								<a
-									href="https://qiita.com/kumackey/items/bf252ca24d343e71d6a2"
-									className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-								>
+								<ExternalLink href="https://qiita.com/kumackey/items/bf252ca24d343e71d6a2">
 									【個人開発】キリ番を祝ってくれるGithub
 									Actionsをリリースしました🎉【Go】
-								</a>
+								</ExternalLink>
 							</li>
 							<li>
-								<a
-									href="https://zenn.dev/kumackey/articles/d20221029-a38eb4bebc3272"
-									className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-								>
+								<ExternalLink href="https://zenn.dev/kumackey/articles/d20221029-a38eb4bebc3272">
 									デプロイ頻度を向上させることへの誤解
-								</a>
+								</ExternalLink>
 							</li>
 						</ul>
 					</article>
@@ -138,15 +105,14 @@ function App() {
 
 				<section className="mb-8">
 					<article className="max-w-3xl mx-auto bg-white rounded-2xl p-6 text-left shadow-sm hover:shadow-md transition-shadow duration-300">
-						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">Works</h2>
+						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">
+							Works
+						</h2>
 
 						<h3 className="text-lg font-semibold mt-8">
-							<a
-								href="https://github.com/kumackey/kiriban"
-								className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-							>
+							<ExternalLink href="https://github.com/kumackey/kiriban">
 								Kiriban
-							</a>
+							</ExternalLink>
 						</h3>
 						<p className="mb-2">
 							Issue番号のキリ番を判定し祝福してくれる、Go製のGithub
@@ -155,24 +121,18 @@ function App() {
 						<KiribanForm />
 
 						<h3 className="text-lg font-semibold mt-8">
-							<a
-								href="https://patchwork.kumackey.com"
-								className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-							>
+							<ExternalLink href="https://patchwork.kumackey.com">
 								Patchwork Calculator
-							</a>
+							</ExternalLink>
 						</h3>
 						<p>
 							ボードゲームのパッチワークにおける、パッチの得点効率を計算するWEBツールです。
 						</p>
 
 						<h3 className="text-lg font-semibold mt-8">
-							<a
-								href="https://github.com/kumackey/profile-updater"
-								className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-							>
+							<ExternalLink href="https://github.com/kumackey/profile-updater">
 								Profile Updater
-							</a>
+							</ExternalLink>
 						</h3>
 						<p>
 							ZennやQiitaの記事などを取得し、GitHubのプロフィールを更新する、Go製のGithub
@@ -193,19 +153,26 @@ function App() {
 
 				<section className="mb-8">
 					<article className="max-w-3xl mx-auto bg-white rounded-2xl p-6 text-left shadow-sm hover:shadow-md transition-shadow duration-300">
-						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">Career</h2>
+						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">
+							Career
+						</h2>
 
 						<h3 className="text-lg font-semibold mt-8 flex items-center gap-2">
-							<img src="/recruit.jpeg" alt="Recruit" className="w-12" width={48} height={48} loading="lazy" />
-							株式会社リクルート (<time dateTime="2023-06-15">2023-06-15</time>〜現在)
+							<img
+								src="/recruit.jpeg"
+								alt="Recruit"
+								className="w-12"
+								width={48}
+								height={48}
+								loading="lazy"
+							/>
+							株式会社リクルート (<time dateTime="2023-06-15">2023-06-15</time>
+							〜現在)
 						</h3>
 						<p>
-							<a
-								href="https://studysapuri.jp/"
-								className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-							>
+							<ExternalLink href="https://studysapuri.jp/">
 								スタディサプリ
-							</a>
+							</ExternalLink>
 							にてバックエンド開発。
 						</p>
 						<h4 className="font-semibold mt-4">プロジェクト</h4>
@@ -214,20 +181,14 @@ function App() {
 								動画配信基盤の設計・開発
 								<ul className="list-disc pl-5">
 									<li>
-										<a
-											href="https://blog.studysapuri.jp/entry/2025/03/04/090000"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://blog.studysapuri.jp/entry/2025/03/04/090000">
 											字幕配信機能の開発
-										</a>
+										</ExternalLink>
 									</li>
 									<li>
-										<a
-											href="https://blog.studysapuri.jp/entry/2026/01/05/090000"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://blog.studysapuri.jp/entry/2026/01/05/090000">
 											字幕生成ワークフローの開発
-										</a>
+										</ExternalLink>
 									</li>
 									<li>動画入稿基盤の開発</li>
 									<li>コンテンツのセキュリティ向上</li>
@@ -248,16 +209,21 @@ function App() {
 						</ul>
 
 						<h3 className="text-lg font-semibold mt-8 flex items-center gap-2">
-							<img src="/sumally.svg" alt="Summary" className="w-12" width={48} height={48} loading="lazy" />
-							株式会社サマリー (<time dateTime="2020-06-01">2020-06-01</time>〜<time dateTime="2023-06-14">2023-06-14</time>)
+							<img
+								src="/sumally.svg"
+								alt="Summary"
+								className="w-12"
+								width={48}
+								height={48}
+								loading="lazy"
+							/>
+							株式会社サマリー (<time dateTime="2020-06-01">2020-06-01</time>〜
+							<time dateTime="2023-06-14">2023-06-14</time>)
 						</h3>
 						<p>
-							<a
-								href="https://pocket.sumally.com/"
-								className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-							>
+							<ExternalLink href="https://pocket.sumally.com/">
 								サマリーポケット
-							</a>
+							</ExternalLink>
 							にてバックエンド開発。
 						</p>
 						<h4 className="font-semibold mt-4">プロジェクト</h4>
@@ -277,7 +243,8 @@ function App() {
 						</ul>
 
 						<h3 className="text-lg font-semibold mt-8">
-							新電元工業株式会社 (<time dateTime="2018-04-01">2018-04-01</time>〜<time dateTime="2020-02-20">2020-02-20</time>)
+							新電元工業株式会社 (<time dateTime="2018-04-01">2018-04-01</time>
+							〜<time dateTime="2020-02-20">2020-02-20</time>)
 						</h3>
 						<p>
 							ディスクリート半導体であるMOSFETの設計開発。
@@ -289,7 +256,9 @@ function App() {
 
 				<section className="mb-8">
 					<article className="max-w-3xl mx-auto bg-white rounded-2xl p-6 text-left shadow-sm hover:shadow-md transition-shadow duration-300">
-						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">Learned</h2>
+						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">
+							Learned
+						</h2>
 
 						<h3 className="text-lg font-semibold mt-8">📕Books</h3>
 						<ul className="list-disc pl-5 space-y-1">
@@ -297,28 +266,19 @@ function App() {
 								コンピュータアーキテクチャ・OS
 								<ul className="list-disc pl-5">
 									<li>
-										<a
-											href="https://www.amazon.co.jp/dp/4296070096"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.amazon.co.jp/dp/4296070096">
 											コンピュータの構成と設計 第6版
-										</a>
+										</ExternalLink>
 									</li>
 									<li>
-										<a
-											href="https://www.amazon.co.jp/dp/B0BG8J5QJ1"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.amazon.co.jp/dp/B0BG8J5QJ1">
 											Linuxのしくみ 増補改訂版
-										</a>
+										</ExternalLink>
 									</li>
 									<li>
-										<a
-											href="https://www.amazon.co.jp/dp/4627810121"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.amazon.co.jp/dp/4627810121">
 											オペレーティングシステム 第2版
-										</a>
+										</ExternalLink>
 									</li>
 								</ul>
 							</li>
@@ -326,12 +286,9 @@ function App() {
 								アルゴリズム
 								<ul className="list-disc pl-5">
 									<li>
-										<a
-											href="https://www.amazon.co.jp/dp/4839952957"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.amazon.co.jp/dp/4839952957">
 											プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
-										</a>
+										</ExternalLink>
 									</li>
 								</ul>
 							</li>
@@ -339,20 +296,14 @@ function App() {
 								データベース・分散システム
 								<ul className="list-disc pl-5">
 									<li>
-										<a
-											href="https://www.amazon.co.jp/dp/4781913903"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.amazon.co.jp/dp/4781913903">
 											リレーショナルデータベース入門 第3版
-										</a>
+										</ExternalLink>
 									</li>
 									<li>
-										<a
-											href="https://www.oreilly.co.jp/books/9784873118703"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.oreilly.co.jp/books/9784873118703">
 											データ指向アプリケーションデザイン
-										</a>
+										</ExternalLink>
 									</li>
 								</ul>
 							</li>
@@ -360,36 +311,24 @@ function App() {
 								ネットワーク
 								<ul className="list-disc pl-5">
 									<li>
-										<a
-											href="https://www.amazon.co.jp/dp/B0827QNDNT"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.amazon.co.jp/dp/B0827QNDNT">
 											マスタリングTCP/IP 入門編 第6版
-										</a>
+										</ExternalLink>
 									</li>
 									<li>
-										<a
-											href="https://www.oreilly.co.jp/books/9784814400669"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.oreilly.co.jp/books/9784814400669">
 											Real World HTTP 第3版
-										</a>
+										</ExternalLink>
 									</li>
 									<li>
-										<a
-											href="https://www.amazon.co.jp/dp/479739448X"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.amazon.co.jp/dp/479739448X">
 											DNSがよくわかる教科書
-										</a>
+										</ExternalLink>
 									</li>
 									<li>
-										<a
-											href="https://www.amazon.co.jp/dp/4297119250"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.amazon.co.jp/dp/4297119250">
 											Web配信の技術―HTTPキャッシュ・リバースプロキシ・CDNを活用する
-										</a>
+										</ExternalLink>
 									</li>
 								</ul>
 							</li>
@@ -397,12 +336,9 @@ function App() {
 								セキュリティ
 								<ul className="list-disc pl-5">
 									<li>
-										<a
-											href="https://www.amazon.co.jp/dp/B09G2T3X1W"
-											className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-										>
+										<ExternalLink href="https://www.amazon.co.jp/dp/B09G2T3X1W">
 											暗号と認証のしくみと理論がこれ1冊でしっかりわかる教科書
-										</a>
+										</ExternalLink>
 									</li>
 								</ul>
 							</li>
@@ -411,20 +347,14 @@ function App() {
 						<h3 className="text-lg font-semibold mt-8">🪪Certifications</h3>
 						<ul className="list-disc pl-5 space-y-1">
 							<li>
-								<a
-									href="https://aws.amazon.com/certification/certified-solutions-architect-associate"
-									className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-								>
+								<ExternalLink href="https://aws.amazon.com/certification/certified-solutions-architect-associate">
 									AWS Certified Solutions Architect - Associate
-								</a>
+								</ExternalLink>
 							</li>
 							<li>
-								<a
-									href="https://www.ipa.go.jp/shiken/kubun/ap.html"
-									className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
-								>
+								<ExternalLink href="https://www.ipa.go.jp/shiken/kubun/ap.html">
 									応用情報技術者試験
-								</a>
+								</ExternalLink>
 							</li>
 						</ul>
 					</article>

@@ -11,6 +11,7 @@ const getRandomPosition = () =>
 	positions[Math.floor(Math.random() * positions.length)];
 
 export function SlotMachine() {
+	const slotNames = ["number", "grade", "position"] as const;
 	const [reels, setReels] = useState(["一", "級", "上"]);
 	const [spinning, setSpinning] = useState(false);
 	const [celebration, setCelebration] = useState(false);
@@ -35,10 +36,9 @@ export function SlotMachine() {
 	return (
 		<div>
 			<div className="flex justify-center text-4xl gap-1">
-				{reels.map((symbol, index) => (
-					// biome-ignore lint/suspicious/noArrayIndexKey: Fixed position slots
+				{reels.map((symbol, i) => (
 					<div
-						key={index}
+						key={slotNames[i]}
 						className="w-16 h-16 flex items-center justify-center bg-white rounded-xl shadow-sm border border-gray-200"
 					>
 						{symbol}

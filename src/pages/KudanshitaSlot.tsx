@@ -5,7 +5,9 @@ export function KudanshitaSlot() {
 	return (
 		<div className="min-h-screen bg-gray-50 text-gray-800 font-sans">
 			<header className="bg-gradient-to-b from-gray-100 to-gray-50 py-8 mb-8 text-center">
-				<h1 className="text-2xl font-bold mb-3 tracking-tight">Kudanshita Slot🎰</h1>
+				<h1 className="text-2xl font-bold mb-3 tracking-tight">
+					Kudanshita Slot🎰
+				</h1>
 				<Link
 					to="/"
 					className="text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600 underline-offset-2 transition-colors duration-200"
