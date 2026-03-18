@@ -198,15 +198,7 @@ function App() {
 							<li>Feature Toggles マイクロサービスの開発</li>
 							<li>モノリスからマイクロサービスへの移行</li>
 						</ul>
-						<h4 className="font-semibold mt-4">技術</h4>
-						<ul className="list-disc pl-5 space-y-1">
-							<li>言語: Go, TypeScript, Ruby on Rails, Rust</li>
-							<li>CDN: Fastly, Cloudflare, CloudFront, Edge Computing</li>
-							<li>動画配信: AWS Elemental MediaConvert, HLS, WebVTT, H.264</li>
-							<li>ストレージ: PostgreSQL, MongoDB, Aurora Serverless, S3</li>
-							<li>ワークフロー: Argo Workflows, Github Actions</li>
-							<li>その他: Kubernetes, Lambda, Terraform</li>
-						</ul>
+
 
 						<h3 className="text-lg font-semibold mt-8 flex items-center gap-2">
 							<img
@@ -233,14 +225,7 @@ function App() {
 							<li>配送日時・集荷日時のスケジュール機能の開発</li>
 							<li>モバイル通知システムの刷新</li>
 						</ul>
-						<h4 className="font-semibold mt-4">技術</h4>
-						<ul className="list-disc pl-5 space-y-1">
-							<li>言語: PHP, Go, Shell Script</li>
-							<li>データベース: MongoDB, PostgreSQL</li>
-							<li>AWS: EC2, ECS, SNS, SQS</li>
-							<li>CI/CD・ジョブ: GitHub Actions, Jenkins, Airflow</li>
-							<li>その他: FCM, Terraform</li>
-						</ul>
+
 
 						<h3 className="text-lg font-semibold mt-8">
 							新電元工業株式会社 (<time dateTime="2018-04-01">2018-04-01</time>
