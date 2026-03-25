@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
+import { useHead } from "../hooks/useHead";
 
 export function Family() {
+	useHead({
+		title: "Family - kumackey.com",
+		description: "kumackeyファミリーの紹介ページ。",
+		path: "/family",
+	});
 	const images = [
 		{ src: "/kumackey.png", alt: "kumackey" },
 		{ src: "/family/kumakey.png", alt: "kumakey" },

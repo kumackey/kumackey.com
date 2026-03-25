@@ -1,6 +1,7 @@
 import "./App.css";
 import { ExternalLink } from "./components/ExternalLink";
 import { KiribanForm } from "./components/KiribanForm";
+import { useHead } from "./hooks/useHead";
 
 const socialLinks = [
 	{
@@ -25,6 +26,13 @@ const socialLinks = [
 ];
 
 function App() {
+	useHead({
+		title: "kumackey.com",
+		description:
+			"kumackeyのポートフォリオサイト。バックエンドエンジニアとしてのキャリア、技術記事、個人開発プロジェクトを紹介しています。",
+		path: "/",
+	});
+
 	return (
 		<div className="min-h-screen bg-gray-50 text-gray-800 font-sans">
 			<header className="bg-gradient-to-b from-gray-100 to-gray-50 py-8 mb-8 text-center">
