@@ -8,3 +8,6 @@
 .wrangler/
 node_modules/
 dist/
+
+# Claude Code local settings
+.claude/settings.local.json
