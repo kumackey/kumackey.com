@@ -78,7 +78,7 @@ function App() {
 				<section className="mb-8">
 					<article className="max-w-3xl mx-auto bg-white rounded-2xl p-6 text-left shadow-sm hover:shadow-md transition-shadow duration-300">
 						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">
-							Pickups
+							✨ Pickups
 						</h2>
 						<ul className="list-disc pl-5 space-y-1">
 							<li>
@@ -114,7 +114,7 @@ function App() {
 				<section className="mb-8">
 					<article className="max-w-3xl mx-auto bg-white rounded-2xl p-6 text-left shadow-sm hover:shadow-md transition-shadow duration-300">
 						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">
-							Works
+							🛠️ Works
 						</h2>
 
 						<h3 className="text-lg font-semibold mt-8">
@@ -162,7 +162,7 @@ function App() {
 				<section className="mb-8">
 					<article className="max-w-3xl mx-auto bg-white rounded-2xl p-6 text-left shadow-sm hover:shadow-md transition-shadow duration-300">
 						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">
-							Career
+							💼 Career
 						</h2>
 
 						<h3 className="text-lg font-semibold mt-8 flex items-center gap-2">
@@ -203,7 +203,11 @@ function App() {
 									<li>コスト削減のための CDN 移管</li>
 								</ul>
 							</li>
-							<li>Feature Toggles マイクロサービスの開発</li>
+							<li>
+								<ExternalLink href="https://blog.studysapuri.jp/entry/darklaunch-v2-features">
+									Feature Toggles マイクロサービスの開発
+								</ExternalLink>
+							</li>
 							<li>モノリスからマイクロサービスへの移行</li>
 						</ul>
 
@@ -250,7 +254,7 @@ function App() {
 				<section className="mb-8">
 					<article className="max-w-3xl mx-auto bg-white rounded-2xl p-6 text-left shadow-sm hover:shadow-md transition-shadow duration-300">
 						<h2 className="text-xl font-bold mb-6 text-center tracking-wide">
-							Learned
+							📚 Learned
 						</h2>
 
 						<h3 className="text-lg font-semibold mt-8">📕Books</h3>
