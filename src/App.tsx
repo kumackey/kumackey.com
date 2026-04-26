@@ -53,6 +53,7 @@ function App() {
 							<a
 								key={link.alt}
 								href={link.href}
+								title={link.alt}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
